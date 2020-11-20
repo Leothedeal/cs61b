@@ -57,7 +57,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.NBody">
+  <component name="RunManager" selected="Application.Planet">
     <configuration name="NBody" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="NBody" />
       <module name="proj0" />
@@ -165,7 +165,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Planet.java</url>
-          <line>36</line>
+          <line>37</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
