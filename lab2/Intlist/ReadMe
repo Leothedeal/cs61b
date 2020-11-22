@@ -1,0 +1,6 @@
+IntList这里还是费了点力，注意destructive和non-destructive的区别，
+destructive需要一个res指针，随着while循环里A指到null时，把B给拼接上，
+A里的参变量这时候都变了，但res任然指向的是A.first。return res
+non-destructive这里则需要一个工具人temp和一个指针ptr，A和ptr在经历一次
+循环之后都要同时动，指向下一个IntList，否则就会出现报错{1,4,5,6}。最后
+return工具人temp，A中的item不会改变。  
