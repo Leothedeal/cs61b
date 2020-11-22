@@ -82,7 +82,9 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        IntList res = A;   //改变IntList A，首先定义一个res让其指向A，当A.rest不为null时，A指向A.rest,经过一个遍历循环后，最后一个null指向B，此时A
+        IntList res = A;
+        while(B==null)
+        {return A;}            //改变IntList A，首先定义一个res让其指向A，当A.rest不为null时，A指向A.rest,经过一个遍历循环后，最后一个null指向B，此时A
         while(A.rest != null) //*此时A已经被改变，由于res一开始便指向A，所以res得到的就是拼接后的A//
         {
             A = A.rest;
@@ -97,9 +99,9 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        while(A==null||B==null)
+        while(B==null)
         {
-            return null;
+            return A;
         }
         IntList temp=new IntList(A.first,null);
         IntList ptr=temp;
