@@ -21,23 +21,23 @@ public class ArrayDeque<T> {
     }
 
     public int minusOne(int index) {
-        return Math.floorMod(index-1, items.length);
+        return Math.floorMod(index - 1, items.length);
     }
 
 
     public int plusOne(int index) {
-        return Math.floorMod(index+1, items.length);
+        return Math.floorMod(index + 1, items.length);
     }
 
     public int plusOne(int index, int length) {
-        return Math.floorMod(index+1, length);
+        return Math.floorMod(index + 1, length);
     }
 
     /**
-     *  invariants:
-     *      设计resize()方法，将在增加ArrayDeaue实例内存的方法中调用
-     *      内部判断内存满则调用expand()增加内存
-     *        如果内存过小则调用reduce()减小内存
+     * invariants:
+     * 设计resize()方法，将在增加ArrayDeaue实例内存的方法中调用
+     * 内部判断内存满则调用expand()增加内存
+     * 如果内存过小则调用reduce()减小内存
      **/
 
     private void resize() {
@@ -64,7 +64,7 @@ public class ArrayDeque<T> {
         items = (T[]) new Object[capacity];
         nextFirst = 0;
         nextLast = 1;
-        for (int i=begin; i != end; i = plusOne(i, temp.length)) {
+        for (int i = begin; i != end; i = plusOne(i, temp.length)) {
             items[nextLast] = temp[i];
             nextLast = plusOne(nextLast);
         }
@@ -73,12 +73,11 @@ public class ArrayDeque<T> {
     }
 
     /**
-     *  invariants:
-     *      通过minusOne()方法确定nextFirst，(nextFirst-1)%items.length
-     *      即nextFirst的下一个位置
-     *      eg. (0 - 1) % 8 = 7
-     *
-     * */
+     * invariants:
+     * 通过minusOne()方法确定nextFirst，(nextFirst-1)%items.length
+     * 即nextFirst的下一个位置
+     * eg. (0 - 1) % 8 = 7
+     */
     public void addFirst(T item) {
         // resize();
         items[nextFirst] = item;
@@ -142,10 +141,10 @@ public class ArrayDeque<T> {
     元素a[7].所以index=7时，实际上要返回a[0]的值，index=0时，实际上要返回a[1]的值。
    */
 
+}
 
 
-
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ArrayDeque<Integer> aq = new ArrayDeque<Integer>();
         for (int i = 0; i < 100; i++) {
             aq.addLast(i);
@@ -156,6 +155,5 @@ public class ArrayDeque<T> {
         }
         aq.printDeque();
         System.out.println(aq.get(0));
-    }
+    }*/
 
-}

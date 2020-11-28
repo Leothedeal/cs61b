@@ -1,8 +1,8 @@
-public class LinkedListDeque <T> {
+public class LinkedListDeque<T> {
     public class TNode {
-        public T item;
-        public TNode next;
-        public TNode prev;
+        private T item;
+        private TNode next;
+        private TNode prev;
 
         public TNode(TNode p, T i, TNode n) {
             item = i;
@@ -41,9 +41,9 @@ public class LinkedListDeque <T> {
     }
 
     public boolean isEmpty() {
-        if (size == 0)
-            return true;
-        else return false;
+        if (size == 0) {
+            return true;}
+         return false;
     }
 
     public int size() {
@@ -52,18 +52,18 @@ public class LinkedListDeque <T> {
 
     public void printDeque() {
         TNode p = sentinel;
-        while (p.next != sentinel) {//错误在这里，由于是双向链表，所以
+        while (p.next != sentinel) { //错误在这里，由于是双向链表，所以
             // 不存在null，到达终点意味着到了
             // sentinel  original:p.next!=null;
-            System.out.print(p.next.item + " ");//应该是p.next.item  original:p.next
+            System.out.print(p.next.item + " "); //应该是p.next.item  original:p.next
             p = p.next;
         }
         System.out.println("oops!the deque contains 0 items");
     }
 
-    public T removeFirst() {//remove之后返回的肯定也要是一个DLList，我忽视了这一点
-        if (size == 0)
-            return null;
+    public T removeFirst() { //remove之后返回的肯定也要是一个DLList，我忽视了这一点
+        if (size == 0) {
+            return null;}
         T rid = sentinel.next.item;
         size -= 1;
         sentinel.next = sentinel.next.next;
@@ -72,8 +72,8 @@ public class LinkedListDeque <T> {
     }
 
     public T removeLast() {   //because the type is not void,so you must return a value
-        if (size == 0)
-            return null;
+        if (size == 0) {
+            return null;}
         size -= 1;
         T rid = sentinel.prev.item;
         sentinel.prev = sentinel.prev.prev;
@@ -86,30 +86,29 @@ public class LinkedListDeque <T> {
         int count = 0;
         if (p.next != null) {
             while (p.next != sentinel) {
-                if (count < index)
-                    count++;
+                 if (count < index) {
+                count++;}
                 p = p.next;
-                if (count == index)   //just by myself,but should take care of it's p.next!=sentinel rather than null
-                    return p.item;    //biggest difference between DLList and SLList
+                      if (count == index){   //just by myself,but should take care of it's p.next!=sentinel rather than null
+                       return p.item;}    //biggest difference between DLList and SLList
             }
         }
         return null;
     }
-}
-   /*public T getRecursiveHelper(int index,TNode ptr,int count){
-        if(index==count)
-            return ptr.item;
-        return getRecursiveHelper(index,ptr.next,count++);
+    public T getRecursiveHelper(int index, TNode ptr, int count) {
+        if(index == count){
+            return ptr.item;}
+        return getRecursiveHelper(index, ptr.next, count++);
     }
-    public T getRecursive(int index){
-        if(index<0||index>=size)
-            return null;
-        TNode ptr=sentinel.next;
-        int count=0;
-        return getRecursiveHelper(index,ptr,count);
-    }*/
+    public T getRecursive(int index) {
+        if(index <0 || index >= size) {
+            return null;}
+        TNode ptr = sentinel.next;
+        int count = 0;
+        return getRecursiveHelper(index, ptr, count);
+    }
 
-
+}
 
 
 
