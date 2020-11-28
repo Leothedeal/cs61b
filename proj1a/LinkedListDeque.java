@@ -84,18 +84,19 @@ public class LinkedListDeque <T> {
     public T get(int index) {
         TNode p = sentinel;
         int count = 0;
-        if (p.next != null){
-        while (p.next != sentinel) {
-            if (count < index)
-                count++;
-            p = p.next;
-            if (count == index)   //just by myself,but should take care of it's p.next!=sentinel rather than null
-                return p.item;    //biggest difference between DLList and SLList
+        if (p.next != null) {
+            while (p.next != sentinel) {
+                if (count < index)
+                    count++;
+                p = p.next;
+                if (count == index)   //just by myself,but should take care of it's p.next!=sentinel rather than null
+                    return p.item;    //biggest difference between DLList and SLList
             }
         }
         return null;
     }
-    public T getRecursiveHelper(int index,TNode ptr,int count){
+}
+   /*public T getRecursiveHelper(int index,TNode ptr,int count){
         if(index==count)
             return ptr.item;
         return getRecursiveHelper(index,ptr.next,count++);
@@ -106,9 +107,9 @@ public class LinkedListDeque <T> {
         TNode ptr=sentinel.next;
         int count=0;
         return getRecursiveHelper(index,ptr,count);
-    }
+    }*/
 
-}
+
 
 
 
