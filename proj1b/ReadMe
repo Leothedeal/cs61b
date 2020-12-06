@@ -1,0 +1,14 @@
+这应该是做的最开心的一个project，虽然可能是因为这个proj比较简单
+整个proj耗时5h15min，也算是第一次没有吧proj拖到隔天。整个过程
+是自己摸索，思考以及google，代码部分的完成度很高了，基本全是自己
+写的，就一两个小的细节点参考了一下别人的。看到自己写的Test绿条条跳出
+来的时候，还是很有成就感的。AG除了Style Check外也接近满分，还有一个
+0.75分的部分好像说我的TestOffByOne有问题，由于手贱提交了太多次，给我锁死
+了，只能等一个小时才能解封了。越学越有意思，菜鸡转码继续冲。
+Academic part：由于proj1a已经写了很多接口，这次很大程度上算是调用接口，
+wordToDeque直接一个循环加addLast就可以解决，判断是否是回文的话，我的方法是
+将原来的String先reverse，再用循环一一对比，如果true，counter自增，最后判定条件是
+counter是否等于回文的长度。同样的思路被应用在overload的method里面，OffByOne以及
+OffByN，由于不用判断中间数，只要第一个和最后一个，第二个和倒数第二个，很自然的思路
+就是size/2为分界点，一个循环加上counter一波带走。至于OffByOne和OffByN很简单，一个
+if可以搞定，就用纯粹的difference，因为string类型是有其对应的ASCII值的
