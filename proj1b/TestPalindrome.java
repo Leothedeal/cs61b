@@ -13,21 +13,21 @@ public class TestPalindrome {
         for (int i = 0; i < "persiflage".length(); i++) {
             actual += d.removeFirst();
         }
-        assertEquals("persiflage", actual);}
-        @Test
-        public void testIsPalindrome(){
-            assertFalse(palindrome.isPalindrome("cat"));
-            assertTrue(palindrome.isPalindrome("tenet"));
-            assertFalse(palindrome.isPalindrome("leo"));
-            assertTrue(palindrome.isPalindrome("noon"));
-        }
-        @Test
-    public void testIsPalindrome2(){
-             CharacterComparator offByOne = new OffByOne();
-            assertTrue(palindrome.isPalindrome("flake",offByOne));
-            assertFalse(palindrome.isPalindrome("aaabbbaaa", offByOne));
-            assertTrue(palindrome.isPalindrome("", offByOne));
-            assertTrue(palindrome.isPalindrome("&", offByOne));
-        }
+        assertEquals("persiflage", actual); }
+    @Test
+        public void testIsPalindrome() {
+        assertFalse(palindrome.isPalindrome("cat"));
+        assertTrue(palindrome.isPalindrome("tenet"));
+        assertFalse(palindrome.isPalindrome("leo"));
+        assertTrue(palindrome.isPalindrome("noon"));
     }
+    @Test
+    public void testIsPalindrome2() {
+        CharacterComparator offByOne = new OffByOne();
+        assertTrue(palindrome.isPalindrome("flake", offByOne));
+        assertFalse(palindrome.isPalindrome("aaabbbaaa", offByOne));
+        assertTrue(palindrome.isPalindrome("", offByOne));
+        assertTrue(palindrome.isPalindrome("&", offByOne));
+    }
+}
 
