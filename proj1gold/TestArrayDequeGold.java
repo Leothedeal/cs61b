@@ -86,14 +86,14 @@ public class TestArrayDequeGold {
         actualList.add(sa.get(1));
         assertEquals("addFirst("+c+")", expectedList, actualList);
         System.out.println("addLast("+c+")");
-        int actual = sa.removeFirst();
-        int expected = (Integer) sa.removeFirst();
-        assertEquals("removeFirst()", actual, expected);
-        System.out.println("removeFirst()");
-        actual = sa.removeLast();
-        expected = (Integer) as.removeLast();
+        int actual = sa.removeLast();
+        int expected = (Integer) sa.removeLast();
         assertEquals("removeLast()", expected, actual);
         System.out.println("removeLast()");
+        actual = sa.removeFirst();
+        expected = (Integer) as.removeFirst();
+        assertEquals("removeFirst()", actual, expected);
+        System.out.println("removeFirst()");
     }
 
 }
