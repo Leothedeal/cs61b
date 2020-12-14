@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="javalib">
+    <CLASSES>
+      <root url="file://D:/360极速浏览器下载/GitDownload/library-sp18-plugin/javalib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/360极速浏览器下载/GitDownload/library-sp18-plugin/javalib" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/junit-4.12-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://D:/360极速浏览器下载/GitDownload/library-sp18-plugin/javalib" recursive="false" />
+    <jarDirectory url="file://D:/360极速浏览器下载/GitDownload/library-sp18-plugin/javalib" recursive="false" type="SOURCES" />
+  </library>
+</component>
